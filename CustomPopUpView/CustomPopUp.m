@@ -22,12 +22,37 @@
     return self;
 }
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self showPopUp];
+}
+
 #pragma mark - Button Action Method
 - (IBAction)closeButtonClicked:(UIButton*)sender {
-    [self removeFromSuperview];
-    if([self.customPopUpDelegate respondsToSelector:@selector(dismissCustomPopUpView:)]){
-        [self.customPopUpDelegate dismissCustomPopUpView:self];
-    }
+    [self closePopUp];
+}
+
+#pragma mark - Show & Close Pop Up Animation
+- (void)showPopUp{
+    self.transform = CGAffineTransformMakeScale(1.5, 1.5);
+    self.alpha = 0.0f;
+    [UIView animateWithDuration:0.25f animations:^{
+        self.alpha = 1.0f;
+        self.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    } completion:^(BOOL finished) {
+    }];
+}
+
+- (void)closePopUp{
+    [UIView animateWithDuration:0.25f animations:^{
+        self.alpha = 0.0f;
+        self.transform = CGAffineTransformMakeScale(1.5, 1.5);
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+        if([self.customPopUpDelegate respondsToSelector:@selector(dismissCustomPopUpView:)]){
+            [self.customPopUpDelegate dismissCustomPopUpView:self];
+        }
+    }];
 }
 
 @end
