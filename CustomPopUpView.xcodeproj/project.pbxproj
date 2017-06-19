@@ -11,9 +11,9 @@
 		BDE109761EF7A97100103B17 /* CustomPopUp.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE109741EF7A97100103B17 /* CustomPopUp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDE109771EF7A97100103B17 /* CustomPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE109751EF7A97100103B17 /* CustomPopUp.m */; };
 		BDE109791EF7AD7D00103B17 /* CustomPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE109781EF7AD7D00103B17 /* CustomPopUp.xib */; };
-		BDE1098A1EF7B79B00103B17 /* CONTRIBUTING.md in Sources */ = {isa = PBXBuildFile; fileRef = BDE109871EF7B79B00103B17 /* CONTRIBUTING.md */; };
-		BDE1098B1EF7B79B00103B17 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BDE109881EF7B79B00103B17 /* LICENSE */; };
-		BDE1098C1EF7B79B00103B17 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BDE109891EF7B79B00103B17 /* README.md */; };
+		BDE1098F1EF7B88600103B17 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BDE109881EF7B79B00103B17 /* LICENSE */; };
+		BDE109901EF7B8EB00103B17 /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = BDE109871EF7B79B00103B17 /* CONTRIBUTING.md */; };
+		BDE109911EF7B8EB00103B17 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BDE109891EF7B79B00103B17 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,7 +141,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE1098B1EF7B79B00103B17 /* LICENSE in Resources */,
+				BDE109901EF7B8EB00103B17 /* CONTRIBUTING.md in Resources */,
+				BDE109911EF7B8EB00103B17 /* README.md in Resources */,
+				BDE1098F1EF7B88600103B17 /* LICENSE in Resources */,
 				BDE109791EF7AD7D00103B17 /* CustomPopUp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,8 +155,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE1098C1EF7B79B00103B17 /* README.md in Sources */,
-				BDE1098A1EF7B79B00103B17 /* CONTRIBUTING.md in Sources */,
 				BDE109771EF7A97100103B17 /* CustomPopUp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
