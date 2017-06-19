@@ -18,3 +18,5 @@ In your view controller where you want to show the pop up import this line below
 #import <CustomPopUpView/CustomPopUp.h>
 
 Write the following line of code in your action event to open and close custom pop up as below:
+CustomPopUp *customPopUp = [[CustomPopUp alloc]initWithFrame:self.view.frame];
+[self.view addSubview:customPopUp];
