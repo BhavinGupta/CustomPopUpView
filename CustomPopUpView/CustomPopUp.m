@@ -14,7 +14,7 @@
 -(id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if(self){
-        self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class])
+        self = [[[NSBundle mainBundle] loadNibNamed:@"CustomPopUp"
                                               owner:self
                                             options:nil] objectAtIndex:0];
         self.frame = frame;
