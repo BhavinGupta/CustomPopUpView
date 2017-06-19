@@ -11,6 +11,9 @@
 		BDE109761EF7A97100103B17 /* CustomPopUp.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE109741EF7A97100103B17 /* CustomPopUp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDE109771EF7A97100103B17 /* CustomPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE109751EF7A97100103B17 /* CustomPopUp.m */; };
 		BDE109791EF7AD7D00103B17 /* CustomPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE109781EF7AD7D00103B17 /* CustomPopUp.xib */; };
+		BDE109841EF7B6E700103B17 /* CONTRIBUTING.md in Sources */ = {isa = PBXBuildFile; fileRef = BDE109811EF7B6E600103B17 /* CONTRIBUTING.md */; };
+		BDE109851EF7B6E700103B17 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BDE109821EF7B6E600103B17 /* LICENSE */; };
+		BDE109861EF7B6E700103B17 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BDE109831EF7B6E700103B17 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		BDE109741EF7A97100103B17 /* CustomPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopUp.h; sourceTree = "<group>"; };
 		BDE109751EF7A97100103B17 /* CustomPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopUp.m; sourceTree = "<group>"; };
 		BDE109781EF7AD7D00103B17 /* CustomPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPopUp.xib; sourceTree = "<group>"; };
+		BDE109811EF7B6E600103B17 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		BDE109821EF7B6E600103B17 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BDE109831EF7B6E700103B17 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 				BDE109751EF7A97100103B17 /* CustomPopUp.m */,
 				BDE109781EF7AD7D00103B17 /* CustomPopUp.xib */,
 				BDE1096D1EF7A90200103B17 /* Info.plist */,
+				BDE109811EF7B6E600103B17 /* CONTRIBUTING.md */,
+				BDE109821EF7B6E600103B17 /* LICENSE */,
+				BDE109831EF7B6E700103B17 /* README.md */,
 			);
 			path = CustomPopUpView;
 			sourceTree = "<group>";
@@ -132,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE109851EF7B6E700103B17 /* LICENSE in Resources */,
 				BDE109791EF7AD7D00103B17 /* CustomPopUp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE109861EF7B6E700103B17 /* README.md in Sources */,
+				BDE109841EF7B6E700103B17 /* CONTRIBUTING.md in Sources */,
 				BDE109771EF7A97100103B17 /* CustomPopUp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +321,7 @@
 				BDE109731EF7A90200103B17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
