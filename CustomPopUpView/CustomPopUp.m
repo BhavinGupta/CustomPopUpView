@@ -18,6 +18,7 @@
                                               owner:self
                                             options:nil] objectAtIndex:0];
         self.frame = frame;
+        [self showPopUp];
     }
     return self;
 }
