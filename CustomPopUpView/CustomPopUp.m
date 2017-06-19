@@ -10,10 +10,16 @@
 
 @implementation CustomPopUp
 
-#pragma mark - Awake From Nib
-- (void)awakeFromNib{
-    [super awakeFromNib];
-    [self showPopUp];
+#pragma mark - Init With Frame
+-(id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if(self){
+        self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class])
+                                              owner:self
+                                            options:nil] objectAtIndex:0];
+        self.frame = frame;
+    }
+    return self;
 }
 
 #pragma mark - Button Action Method
