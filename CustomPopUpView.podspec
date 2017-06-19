@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
 		     :tag => s.version 
 		   }
   s.source_files = "CustomPopUpView"
+  s.resources = 'CustomPopUpView/*.xib'
   s.requires_arc = true
 end
