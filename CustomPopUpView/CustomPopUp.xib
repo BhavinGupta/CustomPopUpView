@@ -15,11 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="I5P-dW-lWH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YPz-Hq-3Et">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <blurEffect style="light"/>
+                </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyR-dQ-jzl">
                     <rect key="frame" x="32" y="142" width="256" height="284"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-f6-kuD">
-                            <rect key="frame" x="222.5" y="8" width="25.5" height="28"/>
+                            <rect key="frame" x="223" y="8" width="25" height="28.5"/>
                             <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
                             <state key="normal" title="X"/>
                             <connections>
@@ -30,7 +39,7 @@
                             <rect key="frame" x="0.5" y="77" width="256" height="130"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SB-DL-27L">
-                                    <rect key="frame" x="26" y="0.0" width="204" height="30"/>
+                                    <rect key="frame" x="25.5" y="0.0" width="205" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="uer-dJ-0qS"/>
                                     </constraints>
@@ -42,7 +51,7 @@
                                     </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKe-yc-1Ea">
-                                    <rect key="frame" x="26" y="50" width="204" height="30"/>
+                                    <rect key="frame" x="25.5" y="50" width="205" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="c07-oP-AGe"/>
                                     </constraints>
@@ -54,7 +63,7 @@
                                     </connections>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr7-ge-WRe">
-                                    <rect key="frame" x="26" y="100" width="204" height="30"/>
+                                    <rect key="frame" x="25.5" y="100" width="205" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="KNf-CE-GGT"/>
                                     </constraints>
@@ -86,12 +95,15 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="I5P-dW-lWH" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="9h8-dt-FR3"/>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="EEa-dW-755"/>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="Ez1-mM-dcQ"/>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IBM-RM-EvC"/>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="mcI-bq-xKT"/>
+                <constraint firstItem="I5P-dW-lWH" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="tUd-Mn-L9f"/>
+                <constraint firstItem="I5P-dW-lWH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vLo-0j-bqS"/>
+                <constraint firstItem="I5P-dW-lWH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vSs-V2-Y3v"/>
             </constraints>
             <connections>
                 <outlet property="popUpView" destination="CyR-dQ-jzl" id="AGy-Na-iD4"/>
