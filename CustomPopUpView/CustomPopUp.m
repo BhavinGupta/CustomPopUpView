@@ -58,11 +58,9 @@
         }
     }
     else{
-        UIViewController *currentTopVC = [self currentTopViewController];
-        [currentTopVC.view didAddSubview:self];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Pop Up View" message:@"Please fill both the details before submission." preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [currentTopVC presentViewController:alertController animated:YES completion:nil];
+        [[UIApplication sharedApplication].keyWindow addSubview:alertController.view];
     }
 }
 
@@ -84,15 +82,6 @@
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
-}
-
-#pragma mark - Current Top View Controller Method
-- (UIViewController *)currentTopViewController{
-    UIViewController *topVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-    while (topVC.presentedViewController){
-        topVC = topVC.presentedViewController;
-    }
-    return topVC;
 }
 
 @end
