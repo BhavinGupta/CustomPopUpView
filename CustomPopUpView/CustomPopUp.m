@@ -60,11 +60,21 @@
     else{
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Pop Up View" message:@"Please fill both the details before submission." preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        UIViewController *popVc = [UIApplication sharedApplication].keyWindow.rootViewController;
-        if([popVc isKindOfClass:[UINavigationController class]]){
-            [popVc presentViewController:alertController animated:YES completion:^{
-            }];
+        UIViewController *topViewController = self.window.rootViewController;
+        while (true){
+            if (topViewController.presentedViewController) {
+                topViewController = topViewController.presentedViewController;
+            } else if ([topViewController isKindOfClass:[UINavigationController class]]) {
+                UINavigationController *nav = (UINavigationController *)topViewController;
+                topViewController = nav.topViewController;
+            } else if ([topViewController isKindOfClass:[UITabBarController class]]) {
+                UITabBarController *tab = (UITabBarController *)topViewController;
+                topViewController = tab.selectedViewController;
+            } else {
+                break;
+            }
         }
+        [topViewController presentViewController:alertController animated:YES completion:nil];
     }
 }
 
