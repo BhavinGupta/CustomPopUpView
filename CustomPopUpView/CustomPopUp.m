@@ -72,10 +72,10 @@
 
 #pragma mark - Show & Close Pop Up Animation
 - (void)showPopUp{
-    self.transform = CGAffineTransformMakeScale(1.5, 1.5);
+    self.transform = CGAffineTransformMakeScale(1.3, 1.3);
     self.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.0f];
     [UIView animateWithDuration:0.25f animations:^{
-        self.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.5f];
+        self.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.8f];
         self.transform = CGAffineTransformMakeScale(1.0, 1.0);
     } completion:^(BOOL finished) {
     }];
@@ -84,7 +84,7 @@
 - (void)closePopUp{
     [UIView animateWithDuration:0.25f animations:^{
         self.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.0f];
-        self.transform = CGAffineTransformMakeScale(1.5, 1.5);
+        self.transform = CGAffineTransformMakeScale(1.3, 1.3);
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
