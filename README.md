@@ -41,6 +41,8 @@ There is also one CustomPopUpDelegate Method which gives you in hand to make cha
 Add this below method after assigning the [customPopUp setCustomPopUpDelegate:self];
 
          #pragma mark - Custom pop view delegate
-         - (void)dismissCustomPopUpView:(CustomPopUp *)customPopView{
-             NSLog(@"dismissed pressed.");
-         }
+           - (void)dismissCustomPopUpView:(CustomPopUp *)customPopView{
+               UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Pop Up View" message:@"Submission Successful." preferredStyle:UIAlertControllerStyleAlert];
+               [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+               [self presentViewController:alertController animated:YES completion:nil];
+           }
