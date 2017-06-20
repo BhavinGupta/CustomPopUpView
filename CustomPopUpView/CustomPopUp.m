@@ -24,12 +24,36 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    
+    self.popUpView.layer.borderWidth = 3.0f;
+    self.popUpView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.popUpView.layer.cornerRadius = 20.0f;
+    [self.popUpView setClipsToBounds:YES];
+    
     [self showPopUp];
 }
 
+#pragma mark - UITextfield Delegate Method
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return [textField resignFirstResponder];
+}
+
 #pragma mark - Button Action Method
-- (IBAction)closeButtonClicked:(UIButton*)sender {
+- (IBAction)onClickCloseButton:(UIButton*)sender {
     [self closePopUp];
+}
+
+- (IBAction)onClickSubmitButton:(UIButton *)sender{
+    if([self.txtUsername.text length]!=0 && [self.txtPassword.text length]!=0){
+        if([self.customPopUpDelegate respondsToSelector:@selector(dismissCustomPopUpView:)]){
+            [self.customPopUpDelegate dismissCustomPopUpView:self];
+        }
+    }
+    else{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Pop Up View" message:@"Please fill both the details before submission." preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 #pragma mark - Show & Close Pop Up Animation
@@ -49,9 +73,6 @@
         self.transform = CGAffineTransformMakeScale(1.5, 1.5);
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
-        if([self.customPopUpDelegate respondsToSelector:@selector(dismissCustomPopUpView:)]){
-            [self.customPopUpDelegate dismissCustomPopUpView:self];
-        }
     }];
 }
 

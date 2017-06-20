@@ -5,9 +5,9 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/BhavinGupta/CustomPopUpView"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Bhavin Gupta" => "bhavingupta007@yahoo.co.in" }
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/BhavinGupta/CustomPopUpView.git", 
-		     :tag => s.version 
+		     :tag => s.version.to_s
 		   }
   s.source_files = "CustomPopUpView"
   s.resources = 'CustomPopUpView/*.xib'

@@ -17,8 +17,11 @@
 
 @end
 
-@interface CustomPopUp : UIView
+@interface CustomPopUp : UIView<UITextFieldDelegate>
 
 @property (strong, nonatomic) id<CustomPopUpDelegate> customPopUpDelegate;
+@property (strong, nonatomic) IBOutlet UIView *popUpView;
+@property (strong, nonatomic) IBOutlet UITextField *txtUsername;
+@property (strong, nonatomic) IBOutlet UITextField *txtPassword;
 
 @end

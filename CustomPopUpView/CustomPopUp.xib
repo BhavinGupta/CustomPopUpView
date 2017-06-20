@@ -20,42 +20,84 @@
                     <rect key="frame" x="32" y="142" width="256" height="284"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyG-f6-kuD">
-                            <rect key="frame" x="107" y="246" width="42" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="qZJ-Hu-S2D"/>
-                            </constraints>
+                            <rect key="frame" x="222.5" y="8" width="25.5" height="28"/>
                             <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
-                            <state key="normal" title="Close"/>
+                            <state key="normal" title="X"/>
                             <connections>
-                                <action selector="closeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Shx-mW-wnL"/>
+                                <action selector="onClickCloseButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2XG-l8-SBe"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello I Am Popped" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDO-nu-wMJ">
-                            <rect key="frame" x="57.5" y="8" width="141" height="21"/>
+                        <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cMz-O5-e58">
+                            <rect key="frame" x="0.5" y="77" width="256" height="130"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SB-DL-27L">
+                                    <rect key="frame" x="26" y="0.0" width="204" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="uer-dJ-0qS"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="iN0-l3-epB" id="oyp-1w-GpN"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKe-yc-1Ea">
+                                    <rect key="frame" x="26" y="50" width="204" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="c07-oP-AGe"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="iN0-l3-epB" id="mCp-7i-i9c"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr7-ge-WRe">
+                                    <rect key="frame" x="26" y="100" width="204" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="KNf-CE-GGT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                    <state key="normal" title="Submit"/>
+                                    <connections>
+                                        <action selector="onClickSubmitButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="uFS-9P-88u"/>
+                                    </connections>
+                                </button>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="21" id="bTH-LT-CA4"/>
+                                <constraint firstItem="GKe-yc-1Ea" firstAttribute="centerY" secondItem="cMz-O5-e58" secondAttribute="centerY" id="6rG-u0-HDe"/>
+                                <constraint firstItem="GKe-yc-1Ea" firstAttribute="centerX" secondItem="cMz-O5-e58" secondAttribute="centerX" id="C5D-kE-s5g"/>
+                                <constraint firstItem="9SB-DL-27L" firstAttribute="width" secondItem="cMz-O5-e58" secondAttribute="width" multiplier="0.7" constant="25.700000000000017" id="EoF-rE-Taf"/>
+                                <constraint firstItem="Jr7-ge-WRe" firstAttribute="width" secondItem="cMz-O5-e58" secondAttribute="width" multiplier="0.7" constant="25.700000000000017" id="Yds-wT-1vO"/>
+                                <constraint firstItem="GKe-yc-1Ea" firstAttribute="width" secondItem="cMz-O5-e58" secondAttribute="width" multiplier="0.7" constant="25.700000000000017" id="pgF-ES-kyU"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" red="0.47843137250000001" green="0.78823529410000004" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="NDO-nu-wMJ" firstAttribute="top" secondItem="CyR-dQ-jzl" secondAttribute="top" constant="8" id="Nbt-ag-das"/>
-                        <constraint firstItem="NDO-nu-wMJ" firstAttribute="centerX" secondItem="CyR-dQ-jzl" secondAttribute="centerX" id="VsG-Xc-MnI"/>
-                        <constraint firstAttribute="bottom" secondItem="EyG-f6-kuD" secondAttribute="bottom" constant="8" id="ix3-lZ-t57"/>
-                        <constraint firstItem="EyG-f6-kuD" firstAttribute="centerX" secondItem="CyR-dQ-jzl" secondAttribute="centerX" id="tXL-BD-BaS"/>
+                        <constraint firstItem="EyG-f6-kuD" firstAttribute="top" secondItem="CyR-dQ-jzl" secondAttribute="top" constant="8" id="9KF-qe-gOR"/>
+                        <constraint firstItem="EyG-f6-kuD" firstAttribute="height" secondItem="CyR-dQ-jzl" secondAttribute="height" multiplier="0.1" id="Hvr-qH-bxT"/>
+                        <constraint firstItem="cMz-O5-e58" firstAttribute="centerX" secondItem="CyR-dQ-jzl" secondAttribute="centerX" id="OxC-3C-JOe"/>
+                        <constraint firstAttribute="trailing" secondItem="EyG-f6-kuD" secondAttribute="trailing" constant="8" id="Wss-ZU-jvR"/>
+                        <constraint firstItem="cMz-O5-e58" firstAttribute="centerY" secondItem="CyR-dQ-jzl" secondAttribute="centerY" id="alp-Qp-w2W"/>
+                        <constraint firstItem="cMz-O5-e58" firstAttribute="width" secondItem="CyR-dQ-jzl" secondAttribute="width" id="os3-Vm-3VI"/>
+                        <constraint firstItem="EyG-f6-kuD" firstAttribute="width" secondItem="CyR-dQ-jzl" secondAttribute="width" multiplier="0.1" id="yTv-km-dWF"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="EEa-dW-755"/>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="Ez1-mM-dcQ"/>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IBM-RM-EvC"/>
                 <constraint firstItem="CyR-dQ-jzl" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="mcI-bq-xKT"/>
             </constraints>
+            <connections>
+                <outlet property="popUpView" destination="CyR-dQ-jzl" id="AGy-Na-iD4"/>
+                <outlet property="txtPassword" destination="GKe-yc-1Ea" id="Jto-58-1ST"/>
+                <outlet property="txtUsername" destination="9SB-DL-27L" id="e5B-CH-Dbz"/>
+            </connections>
         </view>
     </objects>
 </document>
