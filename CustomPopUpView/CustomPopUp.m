@@ -35,7 +35,14 @@
 
 #pragma mark - UITextfield Delegate Method
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    return [textField resignFirstResponder];
+    if(textField == self.txtUsername){
+        [textField resignFirstResponder];
+        [self.txtPassword becomeFirstResponder];
+    }
+    else if(textField == self.txtPassword){
+        [textField resignFirstResponder];
+    }
+    return YES;
 }
 
 #pragma mark - Button Action Method
@@ -45,6 +52,7 @@
 
 - (IBAction)onClickSubmitButton:(UIButton *)sender{
     if([self.txtUsername.text length]!=0 && [self.txtPassword.text length]!=0){
+        [self closePopUp];
         if([self.customPopUpDelegate respondsToSelector:@selector(dismissCustomPopUpView:)]){
             [self.customPopUpDelegate dismissCustomPopUpView:self];
         }
@@ -52,6 +60,7 @@
     else{
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Pop Up View" message:@"Please fill both the details before submission." preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [[UIApplication sharedApplication].keyWindow setRootViewController:(UIViewController*)self];
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
     }
 }
